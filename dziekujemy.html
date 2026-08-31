@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dziękujemy — Złoty Adres</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FCFAF6;--ink:#33312D;--ink-soft:#6E695F;--gold:#AE8749;--line:#DED5C6}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Mulish',system-ui,sans-serif;background:var(--paper);color:var(--ink);
+    min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px}
+  .card{max-width:520px}
+  .mark{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+  .mark svg{color:var(--gold)}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.01em}
+  p{color:var(--ink-soft);margin-top:18px;font-size:1.05rem;line-height:1.6;font-weight:300}
+  .rule{width:52px;height:1px;background:var(--gold);border:0;margin:30px auto}
+  .contact{font-size:.95rem;color:var(--ink)}
+  .contact a{color:var(--gold);text-decoration:none;font-weight:600}
+  .btn{display:inline-block;margin-top:34px;font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+    text-decoration:none;padding:15px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:background .3s}
+  .btn:hover{background:#946f36}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>Dziękujemy za zgłoszenie</h1>
+    <p>Otrzymaliśmy Twoją prośbę o prezentację domu w Krzekowie. Skontaktujemy się, aby ustalić dogodny termin.</p>
+    <hr class="rule">
+    <p class="contact">W pilnej sprawie: <a href="tel:+48603458845">603 45 88 45</a> · <a href="mailto:katarzyna@zlotyadres.pl">katarzyna@zlotyadres.pl</a></p>
+    <a class="btn" href="/">Wróć do oferty</a>
+  </div>
+</body>
+</html>
