@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dom z ogrodem i garażem — Szczecin, Krzekowo | Złoty Adres</title>
+<meta name="description" content="Wykończony bliźniak z ogrodem i garażem w bryle. Szczecin, Krzekowo. 115 m², 4 pokoje, działka 247 m². Cena 1 549 000 zł. Umów prezentację.">
+<meta property="og:title" content="Dom z ogrodem i garażem — Szczecin, Krzekowo">
+<meta property="og:description" content="Wykończony bliźniak w bardzo wysokim standardzie. 115 m², 4 pokoje, ogród, garaż. 1 549 000 zł.">
+<meta property="og:image" content="img/elewacja-front.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFAF6;
+    --paper-warm:#F4EEE5;
+    --greige:#EAE2D6;
+    --ink:#33312D;
+    --ink-soft:#6E695F;
+    --gold:#AE8749;
+    --gold-lt:#C6A567;
+    --blush:#CF9F94;
+    --line:#DED5C6;
+    --charcoal:#2B2A27;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Mulish',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .rule{width:54px;height:1px;background:var(--gold);border:0}
+
+  /* ---------- top bar ---------- */
+  header.top{
+    position:fixed;inset:0 0 auto 0;z-index:60;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;
+    background:rgba(252,250,246,0);
+    transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
+  }
+  header.top.solid{background:rgba(252,250,246,.94);box-shadow:0 1px 0 var(--line);padding:10px 28px;backdrop-filter:blur(6px)}
+  header.top .brand{height:40px;transition:height .4s ease}
+  header.top.solid .brand{height:34px}
+  header.top .brand img{height:100%;width:auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
+  header.top.solid .brand img{filter:none}
+  .top .cta-mini{
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;text-decoration:none;padding:11px 20px;
+    border:1px solid rgba(255,255,255,.55);border-radius:2px;
+    transition:all .3s ease;
+  }
+  header.top.solid .cta-mini{color:var(--ink);border-color:var(--gold)}
+  .top .cta-mini:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(26,23,18,.5) 0%,rgba(26,23,18,.12) 30%,rgba(26,23,18,.28) 60%,rgba(22,19,15,.86) 100%),
+      linear-gradient(90deg,rgba(22,19,15,.62) 0%,rgba(22,19,15,.2) 42%,rgba(22,19,15,0) 72%)}
+  .hero-inner{position:relative;z-index:1;width:100%;padding:0 28px 54px}
+  .hero-inner .wrap{padding:0}
+  .eyebrow{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--gold-lt)}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5.4rem);margin:.28em 0 .35em;max-width:16ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+  .hero h1 em{font-style:italic;color:#f3e4cf}
+  .hero .loc{font-size:1.05rem;letter-spacing:.02em;opacity:.92;display:flex;align-items:center;gap:10px;font-weight:300}
+  .hero .loc svg{flex:0 0 auto}
+  .statbar{
+    display:flex;flex-wrap:wrap;gap:0;margin-top:34px;
+    border-top:1px solid rgba(255,255,255,.28);
+    border-bottom:1px solid rgba(255,255,255,.28);
+  }
+  .statbar .cell{padding:18px 30px 18px 0;margin-right:30px;border-right:1px solid rgba(255,255,255,.2)}
+  .statbar .cell:last-child{border-right:0}
+  .statbar .n{font-family:'Fraunces',serif;font-size:1.7rem;line-height:1;display:block}
+  .statbar .l{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8;margin-top:7px}
+  .hero-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 26px;margin-top:30px}
+  .hero-price .p{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,2.9rem)}
+  .hero-price .pm{font-size:.95rem;opacity:.82;font-weight:300}
+  .btn{
+    display:inline-block;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+    text-decoration:none;padding:16px 34px;border-radius:2px;cursor:pointer;border:1px solid var(--gold);
+    background:var(--gold);color:#fff;transition:all .3s ease;
+  }
+  .btn:hover{background:#946f36;border-color:#946f36}
+  .btn.ghost{background:transparent;color:#fff}
+  .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .btn.dark{background:var(--charcoal);border-color:var(--charcoal)}
+  .btn.dark:hover{background:#000;border-color:#000}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+
+  /* ---------- section base ---------- */
+  section{padding:104px 0}
+  .sec-eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .sec-eyebrow::before{content:"";display:inline-block;width:26px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px;transform:translateY(-3px)}
+  h2.sec-title{font-size:clamp(2rem,4vw,3.1rem);margin:.35em 0 0;max-width:20ch}
+
+  /* ---------- intro ---------- */
+  .intro{background:var(--paper)}
+  .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .lede{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.5vw,2.15rem);line-height:1.32;color:var(--ink);font-weight:300}
+  .lede .drop{color:var(--gold)}
+  .intro p.body{margin-top:26px;color:var(--ink-soft);max-width:52ch}
+  .intro-photo{position:relative}
+  .intro-photo img{width:100%;aspect-ratio:4/3.1;object-fit:cover;border-radius:2px}
+  .intro-photo .tag{position:absolute;left:-14px;bottom:26px;background:var(--charcoal);color:#fff;padding:12px 22px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
+
+  /* ---------- params ---------- */
+  .params{background:var(--paper-warm)}
+  .params-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:52px}
+  .pcell{background:var(--paper-warm);padding:30px 26px}
+  .pcell .v{font-family:'Fraunces',serif;font-size:1.9rem;line-height:1}
+  .pcell .k{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:11px}
+  .params .feat{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .chip{font-size:.82rem;letter-spacing:.03em;padding:9px 16px;border:1px solid var(--line);border-radius:40px;color:var(--ink-soft);background:var(--paper)}
+
+  /* ---------- floors ---------- */
+  .floors{background:var(--paper)}
+  .floor{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .floor + .floor{margin-top:96px}
+  .floor.rev{grid-template-columns:1.15fr .85fr}
+  .floor.rev .floor-txt{order:2}
+  .floor-num{font-family:'Fraunces',serif;font-size:.95rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .floor h3{font-size:2.2rem;margin:.25em 0 .6em}
+  .floor ul{list-style:none;margin-top:8px}
+  .floor li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line);color:var(--ink);font-size:1.02rem}
+  .floor li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+  .floor li b{font-weight:600}
+  .floor-imgs{display:grid;gap:14px}
+  .floor-imgs.two{grid-template-columns:1fr 1fr}
+  .floor-imgs img{width:100%;height:100%;object-fit:cover;border-radius:2px;aspect-ratio:3/3.6}
+  .floor-imgs .wide{grid-column:1/-1;aspect-ratio:16/10}
+
+  /* ---------- gallery ---------- */
+  .gallery{background:var(--charcoal);color:#fff}
+  .gallery .sec-eyebrow{color:var(--gold-lt)}
+  .gallery h2.sec-title{color:#fff}
+  .gal-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px}
+  .gal-count{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .grid{margin-top:48px;columns:3;column-gap:14px}
+  .grid figure{break-inside:avoid;margin:0 0 14px;position:relative;cursor:pointer;overflow:hidden;border-radius:2px}
+  .grid figure img{width:100%;transition:transform .7s cubic-bezier(.2,.7,.2,1);filter:saturate(.98)}
+  .grid figure:hover img{transform:scale(1.05)}
+  .grid figure figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:16px 16px 13px;
+    font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;
+    background:linear-gradient(0deg,rgba(0,0,0,.6),transparent);
+    opacity:0;transform:translateY(6px);transition:.35s ease;
+  }
+  .grid figure:hover figcaption{opacity:1;transform:none}
+
+  /* ---------- 360 ---------- */
+  .tour{background:var(--paper-warm);text-align:center}
+  .tour .rule{margin:0 auto 22px}
+  .tour h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:22ch;margin:0 auto}
+  .tour p{color:var(--ink-soft);max-width:46ch;margin:18px auto 32px}
+
+  /* ---------- location ---------- */
+  .loc-sec{background:var(--paper)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+  .loc-txt p{color:var(--ink-soft);margin-top:20px;max-width:50ch}
+  .loc-txt .why{list-style:none;margin-top:30px}
+  .loc-txt .why li{padding:12px 0 12px 28px;position:relative;border-bottom:1px solid var(--line)}
+  .loc-txt .why li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:1px;background:var(--gold)}
+  .loc-map{border-radius:2px;overflow:hidden;min-height:380px;border:1px solid var(--line)}
+  .loc-map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.25) contrast(1.02)}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--greige)}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+  .agent-card{background:var(--paper);border-radius:2px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(60,45,20,.5)}
+  .agent-card .ph{aspect-ratio:3/3.6;overflow:hidden;background:#e6ddd0}
+  .agent-card .ph img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+  .agent-card .info{padding:26px 28px 30px}
+  .agent-card .role{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .agent-card .nm{font-family:'Fraunces',serif;font-size:1.7rem;margin:6px 0 3px}
+  .agent-card .biuro{color:var(--ink-soft);font-size:.92rem}
+  .agent-card .lines{margin-top:20px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
+  .agent-card .lines a{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:1.02rem;font-weight:500}
+  .agent-card .lines a svg{color:var(--gold);flex:0 0 auto}
+  .agent-card .lines a:hover{color:var(--gold)}
+
+  .form-box .sec-eyebrow{color:var(--gold)}
+  .form-box h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:.3em 0 .1em}
+  .form-box .sub{color:var(--ink-soft);margin-bottom:26px;max-width:44ch}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field.full{grid-column:1/-1}
+  label{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+  input,textarea{
+    width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+    padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:2px;transition:border-color .25s,box-shadow .25s;
+  }
+  input:focus,textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 3px rgba(207,159,148,.25)}
+  textarea{resize:vertical;min-height:104px}
+  .form-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6px}
+  .consent{font-size:.78rem;color:var(--ink-soft);max-width:40ch;line-height:1.5}
+  .hp{position:absolute;left:-9999px}
+  .form-note{margin-top:16px;font-size:.85rem;padding:14px 16px;border-radius:2px;display:none}
+  .form-note.ok{display:block;background:#eef4ec;border:1px solid #cADFBF;color:#3d6b46}
+  .form-note.err{display:block;background:#fbeeec;border:1px solid #f0cfca;color:#9a4b3f}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--charcoal);color:#cfc9bf;padding:60px 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  .foot-brand .wm{font-family:'Fraunces',serif;font-size:1.5rem;letter-spacing:.06em;color:#fff}
+  .foot-brand .wm span{color:var(--gold-lt)}
+  .foot-brand .sub{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px}
+  .foot-brand p{margin-top:18px;font-size:.92rem;max-width:36ch;color:rgba(255,255,255,.6)}
+  .foot-col h4{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:14px;font-weight:600;font-family:'Mulish',sans-serif}
+  .foot-col a,.foot-col p{display:block;color:rgba(255,255,255,.72);text-decoration:none;font-size:.95rem;margin-bottom:9px}
+  .foot-col a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.8rem;color:rgba(255,255,255,.45)}
+  .foot-bottom .offer{letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- lightbox ---------- */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(20,18,15,.95);display:none;align-items:center;justify-content:center}
+  .lb.open{display:flex}
+  .lb img{max-width:92vw;max-height:84vh;object-fit:contain;border-radius:2px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb-cap{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+  .lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:52px;height:52px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s}
+  .lb-btn:hover{background:rgba(255,255,255,.22)}
+  .lb-prev{left:24px}.lb-next{right:24px}
+  .lb-close{position:absolute;top:22px;right:26px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:.8}
+  .lb-close:hover{opacity:1}
+  .lb-counter{position:absolute;top:28px;left:28px;color:rgba(255,255,255,.6);font-size:.85rem;letter-spacing:.1em}
+
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:960px){
+    .grid{columns:2}
+    .intro-grid,.floor,.floor.rev,.loc-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
+    .floor.rev .floor-txt{order:0}
+    .params-grid{grid-template-columns:repeat(2,1fr)}
+    .agent-card{max-width:420px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    section{padding:74px 0}
+    .wrap{padding:0 20px}
+    .hero-inner{padding:0 20px 40px}
+    .top .cta-mini{display:none}
+    .statbar .cell{padding:14px 18px 14px 0;margin-right:18px}
+    .statbar .n{font-size:1.4rem}
+    .grid{columns:1}
+    form .row{grid-template-columns:1fr}
+    .params-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .lb-prev{left:10px}.lb-next{right:10px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .rv{opacity:1;transform:none;transition:none}
+    .grid figure img,.grid figure figcaption{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#top" aria-label="Złoty Adres — strona główna"><img src="img/logo.png" alt="Złoty Adres — Biuro Nieruchomości"></a>
+  <a class="cta-mini" href="#kontakt">Umów prezentację</a>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-bg"><img src="img/elewacja-front.jpg" alt="Elewacja frontowa domu w Szczecinie na Krzekowie" fetchpriority="high"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <p class="eyebrow">Dom na sprzedaż · oferta ZAN-DS-3</p>
+      <h1>Wykończony dom<br>z ogrodem <em>i garażem</em></h1>
+      <p class="loc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Szczecin, Krzekowo — kameralna, jednorodzinna okolica
+      </p>
+
+      <div class="statbar">
+        <div class="cell"><span class="n">115 m²</span><span class="l">Pow. całkowita</span></div>
+        <div class="cell"><span class="n">4</span><span class="l">Pokoje</span></div>
+        <div class="cell"><span class="n">247 m²</span><span class="l">Działka</span></div>
+        <div class="cell"><span class="n">2020</span><span class="l">Rok budowy</span></div>
+      </div>
+
+      <div class="hero-price">
+        <span class="p">1 549 000 zł</span>
+        <span class="pm">13 458 zł / m² · garaż w bryle · gotowy do zamieszkania</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn" href="#kontakt">Umów prezentację</a>
+        <a class="btn ghost" href="#galeria">Zobacz zdjęcia</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div class="rv">
+      <p class="sec-eyebrow">O nieruchomości</p>
+      <p class="lede" style="margin-top:22px"><span class="drop">Dom, w którym wystarczy rozpakować walizki.</span> Zadbany bliźniak w spokojnej, zabudowanej już części Krzekowa — z dala od miejskiego zgiełku, a jednocześnie z dobrym dojazdem do centrum.</p>
+      <p class="body">Wnętrze wykończone spójnie i ze smakiem: jasna, ponadczasowa kolorystyka, kuchnia w zabudowie z blatem w marmurowej tonacji, dekoracyjne oświetlenie i sufitowe podświetlenie LED. Nieruchomość jest gotowa do zamieszkania — bez remontu i dodatkowych nakładów na start.</p>
+    </div>
+    <div class="intro-photo rv">
+      <img src="img/salon-1.jpg" alt="Otwarta strefa dzienna z salonem, jadalnią i schodami">
+      <span class="tag">Otwarta strefa dzienna</span>
+    </div>
+  </div>
+</section>
+
+<!-- PARAMS -->
+<section class="params" id="parametry">
+  <div class="wrap">
+    <div class="rv">
+      <p class="sec-eyebrow">Parametry</p>
+      <h2 class="sec-title">Najważniejsze liczby w jednym miejscu</h2>
+    </div>
+    <div class="params-grid rv">
+      <div class="pcell"><div class="v">115,1 m²</div><div class="k">Powierzchnia całkowita</div></div>
+      <div class="pcell"><div class="v">~99 m²</div><div class="k">Część mieszkalna</div></div>
+      <div class="pcell"><div class="v">15,7 m²</div><div class="k">Garaż w bryle</div></div>
+      <div class="pcell"><div class="v">247 m²</div><div class="k">Działka</div></div>
+      <div class="pcell"><div class="v">4</div><div class="k">Pokoje</div></div>
+      <div class="pcell"><div class="v">2</div><div class="k">Kondygnacje</div></div>
+      <div class="pcell"><div class="v">2020</div><div class="k">Rok budowy</div></div>
+      <div class="pcell"><div class="v">AWZ</div><div class="k">Stan prawny · akt wł. ziemi</div></div>
+    </div>
+    <div class="feat rv">
+      <span class="chip">Bliźniak</span>
+      <span class="chip">Bardzo wysoki standard</span>
+      <span class="chip">Pełne umeblowanie</span>
+      <span class="chip">Okna PCV 3-szybowe, ciepły montaż</span>
+      <span class="chip">Technologia silikatowa</span>
+      <span class="chip">Dachówka</span>
+      <span class="chip">Balkon</span>
+      <span class="chip">Alarm</span>
+      <span class="chip">Internet · TV kablowa</span>
+      <span class="chip">Dojazd drogą wewnętrzną</span>
+    </div>
+  </div>
+</section>
+
+<!-- FLOORS -->
+<section class="floors" id="rozklad">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:60px">
+      <p class="sec-eyebrow">Rozkład</p>
+      <h2 class="sec-title">Parter dla życia towarzyskiego,<br>piętro dla codzienności</h2>
+    </div>
+
+    <div class="floor rv">
+      <div class="floor-txt">
+        <span class="floor-num">Parter</span>
+        <h3>Otwarta strefa dzienna z wyjściem do ogrodu</h3>
+        <ul>
+          <li><b>Salon</b> z bezpośrednim wyjściem do ogrodu</li>
+          <li><b>Kuchnia</b> w zabudowie z blatem w marmurowej tonacji</li>
+          <li><b>Jadalnia</b> w części dziennej</li>
+          <li><b>Osobne WC</b></li>
+          <li><b>Garaż</b> wygodnie wpisany w bryłę budynku</li>
+        </ul>
+      </div>
+      <div class="floor-imgs two">
+        <img src="img/kuchnia-1.jpg" alt="Kuchnia w zabudowie z marmurowym blatem" data-lb>
+        <img src="img/jadalnia.jpg" alt="Jadalnia z drewnianym stołem" data-lb>
+        <img class="wide" src="img/salon-sofa.jpg" alt="Salon z narożną sofą i widokiem na ulicę" data-lb>
+      </div>
+    </div>
+
+    <div class="floor rev rv">
+      <div class="floor-txt">
+        <span class="floor-num">Piętro</span>
+        <h3>Przestrzeń zaprojektowana dla rodziny</h3>
+        <ul>
+          <li><b>Trzy pokoje</b></li>
+          <li><b>Sypialnia główna</b> z wyjściem na balkon</li>
+          <li><b>Wydzielone miejsce do pracy</b></li>
+          <li><b>Łazienka główna 10,2 m²</b> w bieli i złocie</li>
+          <li><b>Garderoba</b> z pełną zabudową</li>
+        </ul>
+      </div>
+      <div class="floor-imgs two">
+        <img src="img/sypialnia-glowna-1.jpg" alt="Sypialnia główna z toaletką" data-lb>
+        <img src="img/lazienka-glowna-1.jpg" alt="Jasna łazienka główna z oknami" data-lb>
+        <img class="wide" src="img/balkon-1.jpg" alt="Balkon z widokiem na okolicę" data-lb>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="gal-head rv">
+      <div>
+        <p class="sec-eyebrow">Galeria</p>
+        <h2 class="sec-title">Obejrzyj każde wnętrze</h2>
+      </div>
+      <span class="gal-count">26 zdjęć · kliknij, aby powiększyć</span>
+    </div>
+    <div class="grid" id="grid"><!-- filled by JS --></div>
+  </div>
+</section>
+
+<!-- 360 -->
+<section class="tour">
+  <div class="wrap">
+    <hr class="rule">
+    <p class="sec-eyebrow" style="display:block;margin-bottom:12px">Spacer wirtualny</p>
+    <h2>Zwiedź dom online, zanim przyjedziesz na miejsce</h2>
+    <p>Interaktywny spacer 360° — przejdź przez wszystkie pomieszczenia w swoim tempie, o dowolnej porze.</p>
+    <a class="btn dark" href="https://view.ricoh360.com/f1c84b24-feb5-4616-9b7f-79e40cac0abe" target="_blank" rel="noopener">Otwórz spacer 360°</a>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc-sec" id="lokalizacja">
+  <div class="wrap loc-grid">
+    <div class="loc-txt rv">
+      <p class="sec-eyebrow">Lokalizacja</p>
+      <h2 class="sec-title">Krzekowo — miasto w zasięgu ręki, cisza pod domem</h2>
+      <p>Krzekowo to spokojna, zielona i kameralna część Szczecina, zdominowana przez zabudowę jednorodzinną. Pozwala cieszyć się własnym domem i ogrodem bez konieczności wyprowadzki poza granice miasta.</p>
+      <ul class="why">
+        <li>Kameralna, jednorodzinna okolica z dala od zgiełku</li>
+        <li>Dobry dojazd do centrum i pozostałych części miasta</li>
+        <li>Zielone otoczenie i cicha, wewnętrzna droga dojazdowa</li>
+        <li>Dostęp do miejskiej infrastruktury w granicach Szczecina</li>
+      </ul>
+    </div>
+    <div class="loc-map rv">
+      <iframe title="Mapa — Krzekowo, Szczecin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Krzekowo,+Szczecin&z=14&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div class="agent-card rv">
+      <div class="ph"><img src="img/agentka.jpg" alt="Katarzyna Adamska — Złoty Adres Biuro Nieruchomości"></div>
+      <div class="info">
+        <p class="role">Twój doradca</p>
+        <p class="nm">Katarzyna Adamska</p>
+        <p class="biuro">Złoty Adres · Biuro Nieruchomości</p>
+        <div class="lines">
+          <a href="tel:+48603458845"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2H7a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"/></svg>603 45 88 45</a>
+          <a href="mailto:katarzyna@zlotyadres.pl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>katarzyna@zlotyadres.pl</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-box rv">
+      <p class="sec-eyebrow">Prezentacja</p>
+      <h2>Umów prezentację domu</h2>
+      <p class="sub">Zostaw kontakt i preferowany termin — oddzwonimy, żeby ustalić szczegóły i pokazać dom na żywo.</p>
+
+      <form name="prezentacja" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?ok=1#kontakt" id="lead">
+        <input type="hidden" name="form-name" value="prezentacja">
+        <input type="hidden" name="oferta" value="ZAN-DS-3 · Szczecin Krzekowo">
+        <p class="hp"><label>Nie wypełniaj: <input name="bot-field"></label></p>
+        <div class="row">
+          <div class="field"><label for="imie">Imię i nazwisko</label><input id="imie" name="imie" required></div>
+          <div class="field"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="mail">E-mail</label><input id="mail" name="email" type="email"></div>
+          <div class="field"><label for="term">Preferowany termin</label><input id="term" name="termin" placeholder="np. sobota przed południem"></div>
+        </div>
+        <div class="field full"><label for="wiad">Wiadomość</label><textarea id="wiad" name="wiadomosc" placeholder="Dodatkowe pytania lub uwagi"></textarea></div>
+        <div class="form-actions">
+          <button class="btn" type="submit">Wyślij zgłoszenie</button>
+          <span class="consent">Wysyłając formularz zgadzasz się na kontakt w sprawie tej oferty.</span>
+        </div>
+        <div class="form-note" id="note"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="wm">ZŁOTY <span>ADRES</span></div>
+        <div class="sub">Biuro Nieruchomości · Katarzyna Adamska</div>
+        <p>Kompleksowa obsługa sprzedaży i zakupu nieruchomości w Szczecinie i okolicach.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+48603458845">603 45 88 45</a>
+        <a href="mailto:katarzyna@zlotyadres.pl">katarzyna@zlotyadres.pl</a>
+        <p>Wzgórze Elfów 52/2<br>71-799 Szczecin</p>
+      </div>
+      <div class="foot-col">
+        <h4>Ta oferta</h4>
+        <a href="#galeria">Galeria zdjęć</a>
+        <a href="https://view.ricoh360.com/f1c84b24-feb5-4616-9b7f-79e40cac0abe" target="_blank" rel="noopener">Spacer 360°</a>
+        <a href="#kontakt">Umów prezentację</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Złoty Adres Biuro Nieruchomości</span>
+      <span class="offer">Oferta ZAN-DS-3 · Szczecin Krzekowo</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <span class="lb-counter" id="lbCount"></span>
+  <button class="lb-close" id="lbClose" aria-label="Zamknij">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Poprzednie">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Następne">&#8250;</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---- gallery data ---- */
+  var photos = [
+    ["img/salon-1.jpg","Salon i strefa dzienna"],
+    ["img/salon-sofa.jpg","Salon"],
+    ["img/jadalnia.jpg","Jadalnia"],
+    ["img/kuchnia-1.jpg","Kuchnia"],
+    ["img/kuchnia-2.jpg","Kuchnia"],
+    ["img/korytarz-schody.jpg","Klatka schodowa"],
+    ["img/korytarz.jpg","Korytarz"],
+    ["img/sypialnia-glowna-1.jpg","Sypialnia główna"],
+    ["img/sypialnia-glowna-2.jpg","Sypialnia główna"],
+    ["img/sypialnia-toaletka.jpg","Sypialnia — toaletka"],
+    ["img/pokoj-1.jpg","Pokój"],
+    ["img/pokoj-1b.jpg","Pokój"],
+    ["img/pokoj-1c.jpg","Pokój"],
+    ["img/pokoj-2.jpg","Pokój"],
+    ["img/garderoba.jpg","Garderoba"],
+    ["img/lazienka-glowna-1.jpg","Łazienka główna"],
+    ["img/lazienka-glowna-2.jpg","Łazienka główna"],
+    ["img/lazienka-2.jpg","Łazienka"],
+    ["img/lazienka-3.jpg","Łazienka"],
+    ["img/wc.jpg","Osobne WC"],
+    ["img/balkon-1.jpg","Balkon"],
+    ["img/balkon-2.jpg","Balkon nad ulicą"],
+    ["img/ogrod-1.jpg","Ogród"],
+    ["img/ogrod-2.jpg","Ogród"],
+    ["img/elewacja-front.jpg","Elewacja frontowa"]
+  ];
+  var grid = document.getElementById('grid');
+  photos.forEach(function(p,i){
+    var fig = document.createElement('figure');
+    fig.dataset.i = i;
+    fig.innerHTML = '<img loading="lazy" src="'+p[0]+'" alt="'+p[1]+'"><figcaption>'+p[1]+'</figcaption>';
+    grid.appendChild(fig);
+  });
+
+  /* ---- lightbox ---- */
+  var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),
+      lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount'),cur=0;
+  function openLB(i){cur=(i+photos.length)%photos.length;lbImg.src=photos[cur][0];lbImg.alt=photos[cur][1];
+    lbCap.textContent=photos[cur][1];lbCount.textContent=(cur+1)+' / '+photos.length;lb.classList.add('open');document.body.style.overflow='hidden';}
+  function closeLB(){lb.classList.remove('open');document.body.style.overflow='';}
+  grid.addEventListener('click',function(e){var f=e.target.closest('figure');if(f)openLB(+f.dataset.i);});
+  document.getElementById('lbNext').onclick=function(e){e.stopPropagation();openLB(cur+1);};
+  document.getElementById('lbPrev').onclick=function(e){e.stopPropagation();openLB(cur-1);};
+  document.getElementById('lbClose').onclick=closeLB;
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')openLB(cur+1);if(e.key==='ArrowLeft')openLB(cur-1);});
+
+  /* inline images with data-lb open lightbox by matching src */
+  document.querySelectorAll('img[data-lb]').forEach(function(img){
+    img.style.cursor='zoom-in';
+    img.addEventListener('click',function(){
+      var idx=photos.findIndex(function(p){return img.src.indexOf(p[0])>-1;});
+      if(idx>-1)openLB(idx);
+    });
+  });
+
+  /* ---- sticky header ---- */
+  var hdr=document.getElementById('top');
+  function onScroll(){hdr.classList.toggle('solid',window.scrollY>window.innerHeight*0.7);}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* ---- reveal ---- */
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  /* ---- form: AJAX submit to Netlify Forms, inline success ---- */
+  var form=document.getElementById('lead'),note=document.getElementById('note');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');
+    var body=new URLSearchParams(new FormData(form)).toString();
+    btn.disabled=true;btn.textContent='Wysyłanie…';note.className='form-note';note.textContent='';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+      .then(function(r){
+        if(r.ok){
+          note.className='form-note ok';
+          note.textContent='Dziękujemy — zgłoszenie zostało wysłane. Skontaktujemy się, aby ustalić termin prezentacji.';
+          form.reset();
+        }else{throw new Error();}
+      })
+      .catch(function(){
+        note.className='form-note err';
+        note.innerHTML='Nie udało się wysłać formularza. Zadzwoń: <a href="tel:+48603458845">603 45 88 45</a> lub napisz na katarzyna@zlotyadres.pl';
+      })
+      .finally(function(){btn.disabled=false;btn.textContent='Wyślij zgłoszenie';});
+  });
+</script>
+</body>
+</html>
