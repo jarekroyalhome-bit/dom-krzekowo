@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dom z ogrodem i garażem — Szczecin, Krzekowo | Złoty Adres</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0708HKZC91"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0708HKZC91');
+</script>
 <meta name="description" content="Wykończony bliźniak z ogrodem i garażem w bryle. Szczecin, Krzekowo. 115 m², 4 pokoje, działka 247 m². Cena 1 549 000 zł. Umów prezentację.">
 <meta property="og:title" content="Dom z ogrodem i garażem — Szczecin, Krzekowo">
 <meta property="og:description" content="Wykończony bliźniak w bardzo wysokim standardzie. 115 m², 4 pokoje, ogród, garaż. 1 549 000 zł.">
@@ -51,8 +59,8 @@
     transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
   }
   header.top.solid{background:rgba(252,250,246,.94);box-shadow:0 1px 0 var(--line);padding:10px 28px;backdrop-filter:blur(6px)}
-  header.top .brand{height:40px;transition:height .4s ease}
-  header.top.solid .brand{height:34px}
+  header.top .brand{height:46px;transition:height .4s ease}
+  header.top.solid .brand{height:40px}
   header.top .brand img{height:100%;width:auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
   header.top.solid .brand img{filter:none}
   .top .cta-mini{
@@ -257,6 +265,9 @@
     .wrap{padding:0 20px}
     .hero-inner{padding:0 20px 40px}
     .top .cta-mini{display:none}
+    header.top{padding:14px 20px}
+    header.top.solid{padding:10px 20px;background:rgba(252,250,246,.98)}
+    header.top .brand,header.top.solid .brand{height:52px}
     .statbar .cell{padding:14px 18px 14px 0;margin-right:18px}
     .statbar .n{font-size:1.4rem}
     .grid{columns:1}
@@ -606,6 +617,20 @@
 
   /* ---- form: natywna wysyłka do Netlify Forms → przekierowanie na /dziekujemy.html ---- */
   /* brak JS-a; formularz wysyła się standardowo, Netlify obsługuje zgłoszenie */
+
+  /* ---- Google Analytics: śledzenie zdarzeń ---- */
+  function ga(name,params){ if(typeof gtag==='function'){ gtag('event',name,params||{}); } }
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    a.addEventListener('click',function(){ ga('klik_telefon',{numer:a.getAttribute('href').replace('tel:','')}); });
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener('click',function(){ ga('klik_email'); });
+  });
+  document.querySelectorAll('a[href*="ricoh360.com"]').forEach(function(a){
+    a.addEventListener('click',function(){ ga('klik_spacer_360'); });
+  });
+  var lead=document.getElementById('lead');
+  if(lead){ lead.addEventListener('submit',function(){ ga('wyslanie_formularza',{oferta:'ZAN-DS-3'}); }); }
 </script>
 </body>
 </html>
