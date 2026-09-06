@@ -12,9 +12,9 @@
   gtag('js', new Date());
   gtag('config', 'G-0708HKZC91');
 </script>
-<meta name="description" content="Wykończony bliźniak z ogrodem i garażem w bryle. Szczecin, Krzekowo. 115 m², 4 pokoje, działka 247 m². Cena 1 549 000 zł. Umów prezentację.">
+<meta name="description" content="Wykończony bliźniak z ogrodem i garażem w bryle. Szczecin, Krzekowo. 115 m², 4 pokoje, działka 247 m². Gotowy do zamieszkania — umów prezentację.">
 <meta property="og:title" content="Dom z ogrodem i garażem — Szczecin, Krzekowo">
-<meta property="og:description" content="Wykończony bliźniak w bardzo wysokim standardzie. 115 m², 4 pokoje, ogród, garaż. 1 549 000 zł.">
+<meta property="og:description" content="Wykończony bliźniak w bardzo wysokim standardzie. 115 m², 4 pokoje, ogród, garaż w bryle. Gotowy do zamieszkania.">
 <meta property="og:image" content="elewacja-front.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,6 +99,11 @@
   .hero-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 26px;margin-top:30px}
   .hero-price .p{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,2.9rem)}
   .hero-price .pm{font-size:.95rem;opacity:.82;font-weight:300}
+  .hero-tag{margin-top:26px;font-size:1rem;font-weight:300;letter-spacing:.02em;opacity:.9}
+  .price-note{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap;padding-bottom:32px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+  .price-note .pn-label{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .price-note .pn-val{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--ink)}
+  .price-note .pn-tag{font-size:.76rem;letter-spacing:.04em;padding:5px 13px;border:1px solid var(--gold);border-radius:40px;color:var(--gold);align-self:center}
   .btn{
     display:inline-block;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
     text-decoration:none;padding:16px 34px;border-radius:2px;cursor:pointer;border:1px solid var(--gold);
@@ -309,10 +314,7 @@
         <div class="cell"><span class="n">2020</span><span class="l">Rok budowy</span></div>
       </div>
 
-      <div class="hero-price">
-        <span class="p">1 549 000 zł</span>
-        <span class="pm">13 458 zł / m² · garaż w bryle · gotowy do zamieszkania</span>
-      </div>
+      <p class="hero-tag">Garaż w bryle · gotowy do zamieszkania · w pełni umeblowany</p>
 
       <div class="hero-actions">
         <a class="btn" href="#kontakt">Umów prezentację</a>
@@ -464,7 +466,13 @@
 
 <!-- CONTACT -->
 <section class="contact" id="kontakt">
-  <div class="wrap contact-grid">
+  <div class="wrap">
+    <div class="price-note rv">
+      <span class="pn-label">Cena ofertowa</span>
+      <span class="pn-val">1 549 000 zł</span>
+      <span class="pn-tag">do negocjacji</span>
+    </div>
+    <div class="contact-grid">
     <div class="agent-card rv">
       <div class="ph"><img src="agentka.jpg" alt="Katarzyna Adamska — Złoty Adres Biuro Nieruchomości"></div>
       <div class="info">
@@ -502,6 +510,7 @@
         </div>
         <div class="form-note" id="note"></div>
       </form>
+    </div>
     </div>
   </div>
 </section>
